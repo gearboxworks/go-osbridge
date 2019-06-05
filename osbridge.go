@@ -1,5 +1,23 @@
 package osbridge
 
+//
+//	Go-OsBridge - Operating System Bridge package for use in Go apps
+//	Copyright (C) 2019  NewClarity Consulting LLC
+//
+//	This program is free software: you can redistribute it and/or modify
+//	it under the terms of the GNU Affero General Public License as published
+//	by the Free Software Foundation, either version 3 of the License, or
+//	(at your option) any later version.
+//
+//	This program is distributed in the hope that it will be useful,
+//	but WITHOUT ANY WARRANTY; without even the implied warranty of
+//	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+//	GNU Affero General Public License for more details.
+//
+//	You should have received a copy of the GNU Affero General Public License
+//	along with this program.  If not, see <https://www.gnu.org/licenses/>.
+//
+
 import (
 	"fmt"
 	"github.com/mitchellh/go-homedir"
@@ -22,7 +40,7 @@ type OsBridge struct {
 
 func NewOsBridge(args ...*Args) *OsBridge {
 	if len(args) == 0 {
-		args = make([]*Args,1)
+		args = make([]*Args, 1)
 	}
 	var b OsBridge
 	b = OsBridge(*args[0])
@@ -45,10 +63,10 @@ func NewOsBridge(args ...*Args) *OsBridge {
 		b.SupportRequestUrl = DefaultSupportRequestUrl
 	}
 	if b.NamedPathMap == nil {
-		b.NamedPathMap = make(PathMap,0)
+		b.NamedPathMap = make(PathMap, 0)
 	}
 	if b.NamedDirMap == nil {
-		b.NamedDirMap = make(DirMap,0)
+		b.NamedDirMap = make(DirMap, 0)
 	}
 	return &b
 }
