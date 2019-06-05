@@ -1,3 +1,3 @@
-module github.com/gearboxworks/go-osbridge
+module go-osbridge
 
 go 1.12
